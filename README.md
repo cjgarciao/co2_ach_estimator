@@ -1,11 +1,11 @@
 # CO2 ACH Estimator for Home Assistant
 
-[![hacs_badge](https://img.shields.iobadge/HACS-Default-41BDF5.svg)](https://github.com/hacs/integration)
+[![hacs_badge](https://img.shields.io/badge/HACS-Default-41BDF5.svg)](https://github.com/hacs/integration)
 [![GitHub Release](https://img.shields.io/github/release/cjgarciao/co2_ach_estimator.svg)](https://github.com/cjgarciao/co2_ach_estimator/releases)
 [![Validate with HACS](https://github.com/cjgarciao/co2_ach_estimator/actions/workflows/hacs.yml/badge.svg)](https://github.com/cjgarciao/co2_ach_estimator/actions/workflows/hacs.yml)
 [![Validate with hassfest](https://github.com/cjgarciao/co2_ach_estimator/actions/workflows/hassfest.yml/badge.svg)](https://github.com/cjgarciao/co2_ach_estimator/actions/workflows/hassfest.yml)
 
-A Home Assistant custom integration that estimates **Air Changes per Hour (ACH)** and **ventilation airflow ($\text{m}^3/\text{h}$)** in a room using the exponential decay of indoor $\text{CO}_2$ levels when the space is unoccupied.
+A Home Assistant custom integration that estimates **Air Changes per Hour (ACH)** and **ventilation airflow ($$\text{m}^3/\text{h}$$)** in a room using the exponential decay of indoor $$\text{CO}_2$$ levels when the space is unoccupied.
 
 > **Note:** This integration was designed and developed with the assistance of AI.
 
