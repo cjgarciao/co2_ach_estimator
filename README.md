@@ -1,6 +1,6 @@
 # CO2 ACH Estimator for Home Assistant
 
-[![hacs_badge](https://shields.iobadge/HACS-Custom-41BDF5.svg)](https://github.comhacs/integration)
+[![hacs_badge](https://shields.iobadge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
 [![Validate with HACS](https://github.com/cjgarciao/co2_ach_estimator/actions/workflows/hacs.yml/badge.svg)](https://github.com/cjgarciao/co2_ach_estimator/actions/workflows/hacs.yml)
 [![Validate with hassfest](https://github.com/cjgarciao/co2_ach_estimator/actions/workflows/hassfest.yml/badge.svg)](https://github.com/cjgarciao/co2_ach_estimator/actions/workflows/hassfest.yml)
 
@@ -92,11 +92,11 @@ entities:
     entity: sensor.ventilacion_salon_ach
     attribute: airflow_m3h
     name: Airflow
-    suffix: m³/h
+    suffix: mÂ³/h
   - type: attribute
     entity: sensor.ventilacion_salon_ach
     attribute: r_squared
-    name: Fit Quality (R²)
+    name: Fit Quality (RÂ²)
   - type: attribute
     entity: sensor.ventilacion_salon_ach
     attribute: status_detail
@@ -121,12 +121,12 @@ content: >
 
   **Official ACH:** {{ state if state != 'unknown' else 'Calculating...' }} {{ 'ACH' if state != 'unknown' else '' }}
   {% if airflow is not none %}
-  **Airflow:** {{ airflow }} m³/h
+  **Airflow:** {{ airflow }} mÂ³/h
   {% endif %}
 
   ---
   * **Preliminary ACH:** {{ est_ach if est_ach is not none else 'N/A' }} ACH
-  * **Correlation (R²):** {{ r2 if r2 is not none else 'N/A' }}
+  * **Correlation (RÂ²):** {{ r2 if r2 is not none else 'N/A' }}
   * **Valid / Total Samples:** {{ valid }} / {{ total }} ({{ mins }} min)
   * **Status:** {{ state_attr(entity, 'status_detail') }}
 ```
