@@ -1,0 +1,87 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configure CO2 ACH Estimator",
+        "description": "Define the sensors and calculation parameters for the room.",
+        "data": {
+          "name": "Room name",
+          "co2_sensor": "Indoor CO2 sensor",
+          "room_volume": "Room volume (optional, for m³/h airflow)",
+          "outdoor_co2_sensor": "Outdoor CO2 sensor (optional)",
+          "outdoor_co2_fixed": "Default outdoor CO2 (if no sensor is provided)",
+          "window_minutes": "Analysis window (minutes)",
+          "min_r2": "Minimum correlation coefficient (R²)",
+          "occupancy_sensor": "Occupancy binary sensor (optional)",
+          "opening_sensor": "Window/door binary sensor (optional)"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Adjust ACH Parameters",
+        "data": {
+          "name": "Room name",
+          "co2_sensor": "Indoor CO2 sensor",
+          "room_volume": "Room volume (optional, for m³/h airflow)",
+          "outdoor_co2_sensor": "Outdoor CO2 sensor (optional)",
+          "outdoor_co2_fixed": "Default outdoor CO2 (if no sensor is provided)",
+          "window_minutes": "Analysis window (minutes)",
+          "min_r2": "Minimum correlation coefficient (R²)",
+          "occupancy_sensor": "Occupancy binary sensor (optional)",
+          "opening_sensor": "Window/door binary sensor (optional)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "ach": {
+        "name": "Air changes per hour",
+        "state_attributes": {
+          "status_detail": {
+            "name": "Status detail"
+          },
+          "estimated_ach": {
+            "name": "Preliminary estimated ACH"
+          },
+          "r_squared": {
+            "name": "Correlation coefficient (R²)"
+          },
+          "airflow_m3h": {
+            "name": "Airflow (m³/h)"
+          },
+          "estimated_airflow_m3h": {
+            "name": "Preliminary airflow (m³/h)"
+          },
+          "room_volume_m3": {
+            "name": "Room volume (m³)"
+          },
+          "samples_count": {
+            "name": "Total buffered samples"
+          },
+          "valid_samples_count": {
+            "name": "Valid samples"
+          },
+          "last_sample_avg_ppm": {
+            "name": "Last buffered average (ppm)"
+          },
+          "last_sample_readings_count": {
+            "name": "Readings in last average"
+          },
+          "elapsed_minutes": {
+            "name": "Elapsed decay time (min)"
+          },
+          "outdoor_co2_used": {
+            "name": "Outdoor CO2 reference (ppm)"
+          },
+          "window_minutes": {
+            "name": "Analysis window (min)"
+          }
+        }
+      }
+    }
+  }
+}

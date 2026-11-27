@@ -1,0 +1,87 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configurar estimador ACH por CO2",
+        "description": "Define los sensores y parámetros de cálculo para la estancia.",
+        "data": {
+          "name": "Nombre de la estancia",
+          "co2_sensor": "Sensor de CO2 interior",
+          "room_volume": "Volumen de la estancia (opcional, para m³/h)",
+          "outdoor_co2_sensor": "Sensor de CO2 exterior (opcional)",
+          "outdoor_co2_fixed": "CO2 exterior por defecto (si no hay sensor)",
+          "window_minutes": "Ventana de análisis (minutos)",
+          "min_r2": "Coeficiente de correlación mínimo (R²)",
+          "occupancy_sensor": "Sensor binario de ocupación (opcional)",
+          "opening_sensor": "Sensor binario de ventana/puerta (opcional)"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Ajustar parámetros ACH",
+        "data": {
+          "name": "Nombre de la estancia",
+          "co2_sensor": "Sensor de CO2 interior",
+          "room_volume": "Volumen de la estancia (opcional, para m³/h)",
+          "outdoor_co2_sensor": "Sensor de CO2 exterior (opcional)",
+          "outdoor_co2_fixed": "CO2 exterior por defecto (si no hay sensor)",
+          "window_minutes": "Ventana de análisis (minutos)",
+          "min_r2": "Coeficiente de correlación mínimo (R²)",
+          "occupancy_sensor": "Sensor binario de ocupación (opcional)",
+          "opening_sensor": "Sensor binario de ventana/puerta (opcional)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "ach": {
+        "name": "Renovaciones por hora",
+        "state_attributes": {
+          "status_detail": {
+            "name": "Detalle de estado"
+          },
+          "estimated_ach": {
+            "name": "ACH estimado preliminar"
+          },
+          "r_squared": {
+            "name": "Coeficiente de correlación (R²)"
+          },
+          "airflow_m3h": {
+            "name": "Caudal de ventilación (m³/h)"
+          },
+          "estimated_airflow_m3h": {
+            "name": "Caudal estimado preliminar (m³/h)"
+          },
+          "room_volume_m3": {
+            "name": "Volumen de la estancia (m³)"
+          },
+          "samples_count": {
+            "name": "Total de muestras en buffer"
+          },
+          "valid_samples_count": {
+            "name": "Muestras válidas"
+          },
+          "last_sample_avg_ppm": {
+            "name": "Última media en buffer (ppm)"
+          },
+          "last_sample_readings_count": {
+            "name": "Lecturas en última media"
+          },
+          "elapsed_minutes": {
+            "name": "Tiempo de decaimiento (min)"
+          },
+          "outdoor_co2_used": {
+            "name": "CO2 exterior de referencia (ppm)"
+          },
+          "window_minutes": {
+            "name": "Ventana de análisis (min)"
+          }
+        }
+      }
+    }
+  }
+}

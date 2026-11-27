@@ -1,0 +1,11 @@
+{
+  "domain": "co2_ach_estimator",
+  "name": "CO2 ACH Estimator",
+  "codeowners": ["@cjgarciao"],
+  "config_flow": true,
+  "documentation": "https://github.com/cjgarciao/co2_ach_estimator",
+  "iot_class": "calculated",
+  "issue_tracker": "https://github.com/cjgarciao/co2_ach_estimator/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}
