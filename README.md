@@ -1,6 +1,7 @@
 # CO2 ACH Estimator for Home Assistant
 
-[![hacs_badge](https://shields.iobadge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
+[![hacs_badge](https://img.shields.iobadge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
+[![GitHub Release](https://img.shields.io/github/release/cjgarciao/co2_ach_estimator.svg)](https://github.com/cjgarciao/co2_ach_estimator/releases)
 [![Validate with HACS](https://github.com/cjgarciao/co2_ach_estimator/actions/workflows/hacs.yml/badge.svg)](https://github.com/cjgarciao/co2_ach_estimator/actions/workflows/hacs.yml)
 [![Validate with hassfest](https://github.com/cjgarciao/co2_ach_estimator/actions/workflows/hassfest.yml/badge.svg)](https://github.com/cjgarciao/co2_ach_estimator/actions/workflows/hassfest.yml)
 
